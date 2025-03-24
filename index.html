@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <style>
-    /* Global Styles */
+ 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Space Mono', monospace;
-      cursor: none !important; /* Ensure no default cursor */
+      cursor: none !important; 
     }
     html {
       scroll-behavior: smooth;
@@ -39,7 +39,7 @@
       }
     }
 
-    /* Custom Cursor */
+  
     .cursor {
       width: 20px;
       height: 20px;
@@ -50,7 +50,7 @@
       transform: translate(-50%, -50%);
       transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
       z-index: 1000;
-      mix-blend-mode: difference; /* Blend with background */
+      mix-blend-mode: difference; 
     }
     .cursor.hover {
       width: 40px;
@@ -58,7 +58,7 @@
       background: rgba(1, 255, 112, 0.2);
     }
 
-    /* Header */
+ 
     header {
       text-align: center;
       padding: 80px 20px 40px;
@@ -135,15 +135,14 @@
       text-decoration: none;
       font-weight: bold;
       border-bottom: 2px solid transparent;
-      transition: border 0.3s, transform 0.3s, color 0.3s; /* Added color transition */
+      transition: border 0.3s, transform 0.3s, color 0.3s; 
     }
     nav a:hover {
-      color: #01ff70; /* Text turns green on hover */
+      color: #01ff70; 
       border-bottom: 2px solid #01ff70;
       transform: translateY(-3px);
     }
-    
-    /* Sections */
+
     section {
       padding: 80px 20px;
       max-width: 1000px;
@@ -167,7 +166,6 @@
       text-align: left;
     }
     
-    /* Card Styles (for projects & experience) */
     .card, .experience-card {
       background: rgba(17, 17, 17, 0.8);
       padding: 20px;
@@ -210,7 +208,7 @@
       transform: rotateY(180deg);
     }
     
-    /* Featured Project Card Styles */
+
     .featured-card {
       background: rgba(17, 17, 17, 0.8);
       padding: 20px;
@@ -378,7 +376,7 @@
       transform: translateY(-3px);
     }
     
-    /* Contact Section */
+
     #contact {
       text-align: center;
     }
@@ -409,7 +407,7 @@
       z-index: 2;
     }
     
-    /* Animations */
+
     @keyframes fadeInSlideUp {
       0% {
         opacity: 0;
@@ -444,7 +442,7 @@
       }
     }
 
-    /* Particle Animation */
+
     #particles {
       position: fixed;
       top: 0;
@@ -457,7 +455,6 @@
 </head>
 
 <body>
-  <!-- Custom Cursor -->
   <div class="cursor"></div>
 
   <header>
@@ -481,7 +478,7 @@
     <section id="experience">
       <h2>Experience</h2>
       <div class="experience-card">
-        <h3>Freelance Web Developer & Translator</h3>
+        <h3>Web Developer & Translator (Freelance)</h3>
         <p><strong>Fiverr (2023-2024)</strong></p>
         <p>Provided web development services as a Freelancer and translated content between English and Nepalese.
           <a href="https://www.fiverr.com/" target="_blank">Click here to open link</a>
@@ -496,8 +493,8 @@
       </div>
       <div class="experience-card">
         <h3>Backend Developer</h3>
-        <p><strong>Opercourt (2024-Present)</strong></p>
-        <p>Part of the development team building Opercourt, an app that helps users discover nearby sports courts. Responsible for developing and managing the entire backend and database.
+        <p><strong>Opencourt (2024-Present)</strong></p>
+        <p>Part of the development team building Opencourt, an app that helps users discover nearby sports courts. Responsible for developing and managing the entire backend and database.
           <a href="https://docs.google.com/presentation/d/13U8NP9RZQ2_HUZfi-AQUI5mXnehcuTpFJAQ-s50xZgk/edit#slide=id.g3275ae855b6_0_759" target="_blank">Click here to open link</a>
         </p>
       </div>
@@ -554,7 +551,7 @@
       <div class="featured-card">
         <div class="card-inner">
           <div class="card-front">
-            <h3>Opercourt App</h3>
+            <h3>Opencourt App</h3>
             <p>Backend Developer for a mobile app that helps users discover nearby sports courts, making it easier to stay active and connect with local facilities.</p>
           </div>
           <div class="card-back">
@@ -630,12 +627,12 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Animate cards and skill cards within the section
+          //Cards animations
           const cards = entry.target.querySelectorAll('.card, .experience-card, .skill-card, .featured-card');
           cards.forEach((card, index) => {
             setTimeout(() => {
               card.classList.add('visible');
-            }, index * 200); // Staggered delay for each card
+            }, index * 200); 
           });
         }
       });
@@ -645,7 +642,7 @@
       observer.observe(section);
     });
 
-    // Vanilla Tilt for cards and skill icons
+    //Tilt for skills
     VanillaTilt.init(document.querySelectorAll(".card, .experience-card, .skill-card, .featured-card"), {
       max: 15,
       speed: 400,
